@@ -1,0 +1,1021 @@
+# azurerm_network_security_group.addsnsg[0] will be updated in-place
+  ~ resource "azurerm_network_security_group" "addsnsg" {
+        id                  = "/subscriptions/[MASKED]/resourceGroups/hub-pacss-network-rg/providers/Microsoft.Network/networkSecurityGroups/10.175.144.128_28-hub-pacss-adds-snet-nsg"
+        name                = "10.175.144.128_28-hub-pacss-adds-snet-nsg"
+      ~ security_rule       = [
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "10003",
+                  - "10005",
+                  - "161-162",
+                  - "443",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "NAC_2"
+              - priority                                   = 3040
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.210/32",
+                  - "10.139.4.211/32",
+                  - "10.139.50.83/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "10123",
+                  - "135",
+                  - "139",
+                  - "3268-3269",
+                  - "363",
+                  - "389",
+                  - "443",
+                  - "445",
+                  - "464",
+                  - "49155-49156",
+                  - "53",
+                  - "8350-8351",
+                  - "88",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "SCCM_3"
+              - priority                                   = 3120
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.100.63/32",
+                  - "10.139.120.52/32",
+                  - "10.139.124.35/32",
+                  - "10.139.160.33/32",
+                  - "10.139.192.55/32",
+                  - "10.70.50.211/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "123",
+                  - "161-162",
+                  - "22",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "NCS_1"
+              - priority                                   = 3260
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.12/32",
+                  - "10.139.4.13/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "123",
+                  - "161-162",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "NCS_2"
+              - priority                                   = 3270
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.12/32",
+                  - "10.139.4.13/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "137-138",
+                  - "33333",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Printing_2"
+              - priority                                   = 3290
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = "10.139.4.20/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "139",
+                  - "161-162",
+                  - "443",
+                  - "445",
+                  - "51347",
+                  - "515",
+                  - "53193",
+                  - "53245",
+                  - "53612",
+                  - "53829",
+                  - "54910",
+                  - "55878",
+                  - "61318",
+                  - "631",
+                  - "9100",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Printing_1"
+              - priority                                   = 3280
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = "10.139.4.20/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "139",
+                  - "1858",
+                  - "22",
+                  - "3389",
+                  - "389",
+                  - "443",
+                  - "4431",
+                  - "445",
+                  - "464",
+                  - "49154-49156",
+                  - "5900-5902",
+                  - "636",
+                  - "80",
+                  - "88",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "CyberArk_1"
+              - priority                                   = 3210
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.52.14/32",
+                  - "10.139.52.15/32",
+                  - "10.139.52.16/32",
+                  - "10.139.52.26/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "139",
+                  - "3121",
+                  - "445",
+                  - "49152-65535",
+                  - "5120",
+                  - "5985",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Ivanti_1"
+              - priority                                   = 3240
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.67/32",
+                  - "10.175.0.204/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "161-162",
+                  - "49154",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Solarwinds_1"
+              - priority                                   = 3000
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.218/32",
+                  - "10.175.0.205/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "161-162",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Solarwinds_2"
+              - priority                                   = 3010
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.218/32",
+                  - "10.175.0.205/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "135",
+                  - "445",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "SCCM_1"
+              - priority                                   = 3100
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = "10.139.52.53/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "137",
+                  - "138",
+                  - "9",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Ivanti_2"
+              - priority                                   = 3250
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.67/32",
+                  - "10.175.0.204/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "137-138",
+                  - "161-162",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "NAC_3"
+              - priority                                   = 3050
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.210/32",
+                  - "10.139.4.211/32",
+                  - "10.139.50.83/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "137-138",
+                  - "389",
+                  - "464",
+                  - "53",
+                  - "67-69",
+                  - "88",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "SCCM_4"
+              - priority                                   = 3130
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.100.63/32",
+                  - "10.139.120.52/32",
+                  - "10.139.124.35/32",
+                  - "10.139.160.33/32",
+                  - "10.139.192.55/32",
+                  - "10.70.50.211/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "22",
+                  - "443",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "Intellisight_1"
+              - priority                                   = 3230
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = "10.139.55.198/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = ""
+              - destination_port_ranges                    = [
+                  - "636",
+                  - "80",
+                ]
+              - direction                                  = "Inbound"
+              - name                                       = "NAC_1"
+              - priority                                   = 3030
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.211/32",
+                  - "10.139.50.83/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Deny_All_Inbound"
+              - priority                                   = 4096
+              - protocol                                   = "*"
+              - source_address_prefix                      = "*"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Rapid7_1"
+              - priority                                   = 3190
+              - protocol                                   = "*"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.160.160/32",
+                  - "10.70.50.15/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Rapid7_2"
+              - priority                                   = 3200
+              - protocol                                   = "*"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.160.160/32",
+                  - "10.139.4.217/32",
+                  - "10.139.50.75/32",
+                  - "10.139.51.252/32",
+                  - "10.139.51.46/32",
+                  - "10.139.51.47/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Solarwinds_3"
+              - priority                                   = 3020
+              - protocol                                   = "Icmp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.4.218/32",
+                  - "10.175.0.205/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Splunk_1"
+              - priority                                   = 3140
+              - protocol                                   = "*"
+              - source_address_prefix                      = "100.64.204.206/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Splunk_2"
+              - priority                                   = 3150
+              - protocol                                   = "*"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.50.179",
+                  - "10.139.50.188",
+                  - "10.139.50.189",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Splunk_4"
+              - priority                                   = 3170
+              - protocol                                   = "Icmp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "100.64.204.213/32",
+                  - "100.64.204.243/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "*"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Zscaler_1"
+              - priority                                   = 3080
+              - protocol                                   = "*"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.1.161/32",
+                  - "10.139.1.162/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "135"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "SCCM_2"
+              - priority                                   = 3110
+              - protocol                                   = "Udp"
+              - source_address_prefix                      = "10.139.52.53/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "135"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.135"
+              - priority                                   = 130
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "137"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.137"
+              - priority                                   = 135
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "138"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.138"
+              - priority                                   = 140
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "139"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.139"
+              - priority                                   = 145
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "25"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Mail_1"
+              - priority                                   = 3060
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "10.139.50.112/32",
+                  - "10.139.50.113/32",
+                  - "10.139.50.114/32",
+                  - "10.139.50.115/32",
+                  - "10.139.50.244/32",
+                  - "10.139.50.245/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "25"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Proofpoint_1"
+              - priority                                   = 3180
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = "10.139.1.151/32"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "3389"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.3389"
+              - priority                                   = 995
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "443"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Rubrik_1"
+              - priority                                   = 3300
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "172.31.100.11/32",
+                  - "172.31.100.12/32",
+                  - "172.31.100.13/32",
+                  - "172.31.100.14/32",
+                  - "172.31.100.15/32",
+                  - "172.31.100.16/32",
+                  - "172.31.100.17/32",
+                  - "172.31.100.18/32",
+                  - "172.31.100.19/32",
+                  - "172.31.100.20/32",
+                  - "172.31.100.21/32",
+                  - "172.31.100.22/32",
+                  - "172.31.100.23/32",
+                  - "172.31.100.24/32",
+                  - "172.31.100.25/32",
+                  - "172.31.100.26/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "445"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "domainservices.445"
+              - priority                                   = 150
+              - protocol                                   = "*"
+              - source_address_prefix                      = "VirtualNetwork"
+              - source_address_prefixes                    = []
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          - {
+              - access                                     = "Allow"
+              - description                                = ""
+              - destination_address_prefix                 = "*"
+              - destination_address_prefixes               = []
+              - destination_application_security_group_ids = []
+              - destination_port_range                     = "8089"
+              - destination_port_ranges                    = []
+              - direction                                  = "Inbound"
+              - name                                       = "Splunk_3"
+              - priority                                   = 3160
+              - protocol                                   = "Tcp"
+              - source_address_prefix                      = ""
+              - source_address_prefixes                    = [
+                  - "100.64.204.213/32",
+                  - "100.64.204.243/32",
+                ]
+              - source_application_security_group_ids      = []
+              - source_port_range                          = "*"
+              - source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "135"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.135"
+              + priority                                   = 130
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "137"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.137"
+              + priority                                   = 135
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "138"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.138"
+              + priority                                   = 140
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "139"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.139"
+              + priority                                   = 145
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "3389"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.3389"
+              + priority                                   = 995
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = null
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "445"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "domainservices.445"
+              + priority                                   = 150
+              + protocol                                   = "*"
+              + source_address_prefix                      = "VirtualNetwork"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+        tags                = {
+            "Department"      = "Infrastructure"
+            "Deployment Date" = "07/02/2021"
+            "Environment"     = "shared"
+            "Support Email"   = "cloudops@panasonic.aero"
+        }
+        # (2 unchanged attributes hidden)
+        # (1 unchanged block hidden)
+    }
+  # azurerm_network_security_rule.addsnsg_coresgrules["CyberArk_2"] will be created
+  + resource "azurerm_network_security_rule" "addsnsg_coresgrules" {
+      + access                      = "Allow"
+      + destination_address_prefix  = "*"
+      + destination_port_ranges     = [
+          + "135",
+          + "137-138",
+          + "4431",
+          + "464",
+          + "88",
+        ]
+      + direction                   = "Inbound"
+      + id                          = (known after apply)
+      + name                        = "CyberArk_2"
+      + network_security_group_name = "10.175.144.128_28-hub-pacss-adds-snet-nsg"
+      + priority                    = 3220
+      + protocol                    = "Udp"
+      + resource_group_name         = "hub-pacss-network-rg"
+      + source_address_prefixes     = [
+          + "10.139.52.14/32",
+          + "10.139.52.15/32",
+          + "10.139.52.16/32",
+          + "10.139.52.26/32",
+        ]
+      + source_port_range           = "*"
+    }
+  # azurerm_network_security_rule.addsnsg_coresgrules["CyberArk_3"] will be created
+  + resource "azurerm_network_security_rule" "addsnsg_coresgrules" {
+      + access                      = "Allow"
+      + destination_address_prefix  = "*"
+      + destination_port_range      = "*"
+      + direction                   = "Inbound"
+      + id                          = (known after apply)
+      + name                        = "CyberArk_3"
+      + network_security_group_name = "10.175.144.128_28-hub-pacss-adds-snet-nsg"
+      + priority                    = 3225
+      + protocol                    = "*"
+      + resource_group_name         = "hub-pacss-network-rg"
+      + source_address_prefixes     = [
+          + "10.139.160.120/32",
+          + "10.139.160.121/32",
+          + "10.139.160.122/32",
+          + "10.175.2.196/32",
+        ]
+      + source_port_range           = "*"
+    }
+  # azurerm_virtual_machine.domain_controller[0] will be updated in-place
+  ~ resource "azurerm_virtual_machine" "domain_controller" {
+        id                               = "/subscriptions/[MASKED]/resourceGroups/hub-pacss-adds-rg/providers/Microsoft.Compute/virtualMachines/ad-dc-pacss1"
+        name                             = "ad-dc-pacss1"
+        tags                             = {
+            "Department"      = "Infrastructure"
+            "Deployment Date" = "07/02/2021"
+            "Environment"     = "shared"
+            "Support Email"   = "cloudops@panasonic.aero"
+        }
+        # (8 unchanged attributes hidden)
+      + storage_data_disk {
+          + caching                   = "None"
+          + create_option             = "Empty"
+          + disk_size_gb              = 64
+          + lun                       = 0
+          + managed_disk_type         = "Premium_LRS"
+          + name                      = "ad-dc-pacss1-datadisk"
+          + write_accelerator_enabled = false
+        }
+      ~ storage_os_disk {
+          ~ managed_disk_type         = "StandardSSD_LRS" -> "Premium_LRS"
+            name                      = "ad-dc-pacss1-osdisk"
